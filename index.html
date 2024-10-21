@@ -7,11 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gill+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Coolvetica';
-            src: url('https://your-font-url-here/Coolvetica.ttf'); /* Link to Coolvetica font */
-        }
-
         body {
             font-family: 'Gill Sans', sans-serif;
             background-color: #EAE6FA;
@@ -29,23 +24,23 @@
 
         p {
             font-size: 1.2em;
-            color: #FFB300; /* Darker yellow */
+            color: #FFB300;
             margin-top: 20px;
         }
 
         .greetings, .math-test {
-            display: none; /* Hide initial greetings and math test */
+            display: none;
             margin-top: 30px;
-            font-family: 'Montserrat', sans-serif; /* Set to Montserrat font */
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.2em;
             color: #4a4a4a;
-            font-weight: bold; /* Set to bold */
+            font-weight: bold;
         }
 
         .birthday-gif {
-            width: auto; /* Maintain aspect ratio */
-            height: 200px; /* Fixed height for all images */
-            margin-bottom: 20px; /* Space below the GIFs */
+            width: auto;
+            height: 200px;
+            margin-bottom: 20px;
         }
 
         .click-here {
@@ -54,28 +49,26 @@
             padding: 10px 20px;
             font-size: 1.5em;
             color: white;
-            background-color: #6A5ACD; /* Soft purple */
+            background-color: #6A5ACD;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
-            text-align: center; /* Center the text */
         }
 
         .photos {
-            display: none; /* Hide initial photos */
+            display: none;
             margin-top: 20px;
-            display: flex; /* Use flexbox for layout */
-            justify-content: center; /* Center the photos */
-            flex-wrap: wrap; /* Wrap photos to the next line */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .photo {
-            width: 225px; /* Fixed width for portrait 9:16 */
-            height: 400px; /* Fixed height for portrait 9:16 */
-            object-fit: cover; /* Crop photos to fit */
-            margin: 10px; /* Space between photos */
-            cursor: pointer; /* Change cursor to pointer */
+            width: 225px;
+            height: 400px;
+            object-fit: cover;
+            margin: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -111,37 +104,37 @@
 
     <!-- Cover Images -->
     <div class="photos" id="photos">
-        <img class="photo" src="https://github.com/liatj/Happy-Birthday-Yang/blob/2e6a8a75c9cf218b25838370b24b1c08c156123d/WhatsApp%20Image%202024-10-21%20at%2011.10.43%20PM.jpeg" alt="Birthday Cover 1" onclick="openImage(this.src)">
-        <img class="photo" src="https://github.com/liatj/Happy-Birthday-Yang/blob/2e6a8a75c9cf218b25838370b24b1c08c156123d/WhatsApp%20Image%202024-10-21%20at%2010.41.43%20PM(1).jpeg" alt="Birthday Cover 2" onclick="openImage(this.src)">
-        <img class="photo" src="https://github.com/liatj/Happy-Birthday-Yang/blob/2e6a8a75c9cf218b25838370b24b1c08c156123d/WhatsApp%20Image%202024-10-21%20at%2011.23.36%20PM.jpeg" alt="Birthday Cover 3" onclick="openImage(this.src)">
-        <img class="photo" src="https://github.com/liatj/Happy-Birthday-Yang/blob/89db41c7d9eba175b8e5bf73afe415f16a8eac2a/WhatsApp%20Image%202024-10-21%20at%2010.40.20%20PM.jpeg" alt="Birthday Cover 4" onclick="openImage(this.src)">
+        <img class="photo" src="https://github.com/liatj/Happy-Birthday-Yang/blob/11316487375379d099b6eb411a11d37fca81d9a3/WhatsApp%20Image%202024-10-21%20at%2011.10.43%20PM.jpeg?raw=true" alt="Birthday Cover 1" onclick="openImage(this.src)">
+        <img class="photo" src="https://github.com/liatj/Happy-Birthday-Yang/blob/11316487375379d099b6eb411a11d37fca81d9a3/WhatsApp%20Image%202024-10-21%20at%2010.41.43%20PM(1).jpeg?raw=true" alt="Birthday Cover 2" onclick="openImage(this.src)">
+        <img class="photo" src="https://github.com/liatj/Happy-Birthday-Yang/blob/11316487375379d099b6eb411a11d37fca81d9a3/WhatsApp%20Image%202024-10-21%20at%2011.23.36%20PM.jpeg?raw=true" alt="Birthday Cover 3" onclick="openImage(this.src)">
+        <img class="photo" src="https://github.com/liatj/Happy-Birthday-Yang/blob/11316487375379d099b6eb411a11d37fca81d9a3/WhatsApp%20Image%202024-10-21%20at%2010.40.20%20PM.jpeg?raw=true" alt="Birthday Cover 4" onclick="openImage(this.src)">
     </div>
 
     <!-- Audio -->
     <audio id="birthday-audio" controls>
-        <source src="https://github.com/liatj/Happy-Birthday-Yang/blob/89db41c7d9eba175b8e5bf73afe415f16a8eac2a/HAPPY%20BIRTH%20DAY%20KH%E1%BA%AEC%20THI%E1%BB%86N%20-%20BOT%20-%20%C3%81I%20NHI%20-%20THI%E1%BB%86N%20COBRA%20(mp3cut.net).mp3" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/liatj/Happy-Birthday-Yang/main/HAPPY%20BIRTH%20DAY%20KH%E1%BA%AEC%20THI%E1%BB%86N%20-%20BOT%20-%20%C3%81I%20NHI%20-%20THI%E1%BB%86N%20COBRA%20(mp3cut.net).mp3" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
 
     <script>
         function showMathTest() {
-            document.getElementById("math-test").style.display = "block"; // Show math test
+            document.getElementById("math-test").style.display = "block";
         }
 
         function checkAnswers() {
             const answer1 = document.getElementById("answer1").value;
             const answer2 = document.getElementById("answer2").value;
             if (answer1 == 110 && answer2 == 120) {
-                document.getElementById("greetings").style.display = "block"; // Show greetings
-                document.getElementById("photos").style.display = "flex"; // Show photos
-                document.getElementById("birthday-audio").play(); // Play the audio
+                document.getElementById("greetings").style.display = "block";
+                document.getElementById("photos").style.display = "flex";
+                document.getElementById("birthday-audio").play();
             } else {
-                alert("Jawaban salah! Coba lagi."); // Alert for incorrect answers
+                alert("Jawaban salah! Coba lagi.");
             }
         }
 
         function openImage(src) {
-            window.open(src, '_blank'); // Open the image in a new tab
+            window.open(src, '_blank');
         }
     </script>
 
