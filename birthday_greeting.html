@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Vania!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gill+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Coolvetica';
+            src: url('https://your-font-url-here/Coolvetica.ttf'); /* Link to Coolvetica font */
+        }
+
+        body {
+            font-family: 'Gill Sans', sans-serif;
+            background-color: #EAE6FA;
+            color: #4a4a4a;
+            text-align: center;
+            padding: 50px;
+        }
+        
+        h1 {
+            font-family: 'Coolvetica', sans-serif;
+            color: #6A5ACD;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #FFB300; /* Darker yellow */
+            margin-top: 20px;
+        }
+
+        .greetings, .math-test {
+            display: none; /* Hide initial greetings and math test */
+            margin-top: 30px;
+            font-family: 'Montserrat', sans-serif; /* Set to Montserrat font */
+            font-size: 1.2em;
+            color: #4a4a4a;
+            font-weight: bold; /* Set to bold */
+        }
+
+        .birthday-gif {
+            width: auto; /* Maintain aspect ratio */
+            height: 200px; /* Fixed height for all images */
+            margin-bottom: 20px; /* Space below the GIFs */
+        }
+
+        .click-here {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: white;
+            background-color: #6A5ACD; /* Soft purple */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center; /* Center the text */
+        }
+
+        .photos {
+            display: none; /* Hide initial photos */
+            margin-top: 20px;
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center the photos */
+            flex-wrap: wrap; /* Wrap photos to the next line */
+        }
+
+        .photo {
+            width: 225px; /* Fixed width for portrait 9:16 */
+            height: 400px; /* Fixed height for portrait 9:16 */
+            object-fit: cover; /* Crop photos to fit */
+            margin: 10px; /* Space between photos */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top GIFs -->
+    <img class="birthday-gif" src="https://media.giphy.com/media/GvjRy6pUMUjQxiKNlh/giphy.gif" alt="Elmo GIF">
+    <img class="birthday-gif" src="https://media.giphy.com/media/kItkzgKCripyJxmT4h/giphy.gif" alt="Birthday Celebration">
+    <img class="birthday-gif" src="https://media.giphy.com/media/jTAmWihUzrpbkI2ha8/giphy.gif" alt="Blooming Flower">
+
+    <h1>Happy Birthday Vania!</h1>
+    
+    <a class="click-here" onclick="showMathTest()">Tekan untuk memunculkan ucapan</a>
+
+    <!-- Math Test -->
+    <div class="math-test" id="math-test">
+        <p>1. 23 + 87 = <input type="number" id="answer1" /></p>
+        <p>2. 24 x 5 = <input type="number" id="answer2" /></p>
+        <button onclick="checkAnswers()">Submit</button>
+    </div>
+
+    <div class="greetings" id="greetings">
+        <h2>HAPPY BIRTHDAY TO OUR DEAREST BUNGSU</h2>
+        <h3>VANIA</h3>
+        <p>WUATB PASTINYA</p>
+        <p>CHEERS TO LESS DRAMA<br>
+        LESS ARTINYA KURANG - JADI MASIH ADA DRAMA DIKIT2 GAPAPA<br>
+        HIDUP RASANYA KURANG TANPA DRAMA SEHARI2 U<br>
+        CHEERS FOR UPCOMING TRIPS (JANGAN WACANA PLIS)<br>
+        ALSO CHEERS TO MANY YEARS TO COME!</p>
+        <p>P.S LANDYARDNYA ORI KOK BUKAN KW :) #PASTIORI</p>
+    </div>
+
+    <!-- Cover Images -->
+    <div class="photos" id="photos">
+        <img class="photo" src="file:///E:/Personal/Birthday%20Yang%203/WhatsApp%20Image%202024-10-21%20at%2011.10.43%20PM.jpeg" alt="Birthday Cover 1" onclick="openImage(this.src)">
+        <img class="photo" src="file:///E:/Personal/Birthday%20Yang%203/WhatsApp%20Image%202024-10-21%20at%2010.41.43%20PM(1).jpeg" alt="Birthday Cover 2" onclick="openImage(this.src)">
+        <img class="photo" src="file:///E:/Personal/Birthday%20Yang%203/WhatsApp%20Image%202024-10-21%20at%2011.23.36%20PM.jpeg" alt="Birthday Cover 3" onclick="openImage(this.src)">
+        <img class="photo" src="file:///E:/Personal/Birthday%20Yang%203/WhatsApp%20Image%202024-10-21%20at%2010.40.20%20PM.jpeg" alt="Birthday Cover 4" onclick="openImage(this.src)">
+    </div>
+
+    <!-- Audio -->
+    <audio id="birthday-audio" controls>
+        <source src="file:///E:/Personal/Birthday%20Yang%203/HAPPY%20BIRTH%20DAY%20KHẮC%20THIỆN%20-%20BOT%20-%20ÁI%20NHI%20-%20THIỆN%20COBRA.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        function showMathTest() {
+            document.getElementById("math-test").style.display = "block"; // Show math test
+        }
+
+        function checkAnswers() {
+            const answer1 = document.getElementById("answer1").value;
+            const answer2 = document.getElementById("answer2").value;
+            if (answer1 == 110 && answer2 == 120) {
+                document.getElementById("greetings").style.display = "block"; // Show greetings
+                document.getElementById("photos").style.display = "flex"; // Show photos
+                document.getElementById("birthday-audio").play(); // Play the audio
+            } else {
+                alert("Jawaban salah! Coba lagi."); // Alert for incorrect answers
+            }
+        }
+
+        function openImage(src) {
+            window.open(src, '_blank'); // Open the image in a new tab
+        }
+    </script>
+
+</body>
+</html>
