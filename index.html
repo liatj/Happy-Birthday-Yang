@@ -87,6 +87,12 @@
     <div class="math-test" id="math-test">
         <p>1. 23 + 87 = <input type="number" id="answer1" /></p>
         <p>2. 24 x 5 = <input type="number" id="answer2" /></p>
+        <p>3. Siapa yang memproklamasikan kemerdekaan Indonesia?<br>
+            <input type="radio" name="trivia" value="Sukarno"> Sukarno<br>
+            <input type="radio" name="trivia" value="Suharto"> Suharto<br>
+            <input type="radio" name="trivia" value="Hatta"> Hatta<br>
+            <input type="radio" name="trivia" value="Soekarno-Hatta"> Soekarno-Hatta
+        </p>
         <button onclick="checkAnswers()">Submit</button>
     </div>
 
@@ -126,7 +132,9 @@
         function checkAnswers() {
             const answer1 = document.getElementById("answer1").value;
             const answer2 = document.getElementById("answer2").value;
-            if (answer1 == 110 && answer2 == 120) {
+            const triviaAnswer = document.querySelector('input[name="trivia"]:checked');
+
+            if (answer1 == 110 && answer2 == 120 && triviaAnswer && triviaAnswer.value === "Soekarno-Hatta") {
                 document.getElementById("greetings").style.display = "block";
                 document.getElementById("photos").style.display = "flex";
                 document.getElementById("birthday-audio").play();
