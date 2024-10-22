@@ -87,22 +87,19 @@
     <div class="math-test" id="math-test">
         <p>1. 23 + 87 = <input type="number" id="answer1" /></p>
         <p>2. 24 x 5 = <input type="number" id="answer2" /></p>
-        <p>3. Siapa yang memproklamasikan kemerdekaan Indonesia?<br>
-            <input type="radio" name="trivia" value="Sukarno"> Sukarno<br>
-            <input type="radio" name="trivia" value="Suharto"> Suharto<br>
-            <input type="radio" name="trivia" value="Hatta"> Hatta<br>
-            <input type="radio" name="trivia" value="Soekarno-Hatta"> Soekarno-Hatta
-        </p>
         <button onclick="checkAnswers()">Submit</button>
     </div>
 
     <div class="greetings" id="greetings">
         <h2>HAPPY BIRTHDAY TO OUR DEAREST BUNGSU</h2>
         <h3>YANG, VANIA</h3>
-        <p>Selamat ulang tahun! Semoga hari ini penuh dengan kebahagiaan dan cinta.</p>
-        <p>Dari semua momen yang kita bagi, semoga hari ini menjadi yang paling spesial.</p>
-        <p>dengan penuh cinta dan kesabaran<br>
-        Inten, Nathan, Fidel</p>
+        <p>WUATB PASTINYA</p>
+        <p>CHEERS TO LESS DRAMA<br>
+        LESS ARTINYA KURANG - JADI MASIH ADA DRAMA DIKIT2 GAPAPA LAH<br>
+        HIDUP RASANYA KURANG TANPA DRAMA SEHARI2 U<br>
+        CHEERS FOR UPCOMING TRIPS (JANGAN WACANA PLIS)<br>
+        ALSO CHEERS TO MANY YEARS TO COME!</p>
+        <p>P.S LANDYARDNYA ORI KOK BUKAN KW :) #PASTIORI</p>
     </div>
 
     <!-- Cover Images -->
@@ -127,9 +124,7 @@
         function checkAnswers() {
             const answer1 = document.getElementById("answer1").value;
             const answer2 = document.getElementById("answer2").value;
-            const triviaAnswer = document.querySelector('input[name="trivia"]:checked');
-
-            if (answer1 == 110 && answer2 == 120 && triviaAnswer && triviaAnswer.value === "Soekarno-Hatta") {
+            if (answer1 == 110 && answer2 == 120) {
                 document.getElementById("greetings").style.display = "block";
                 document.getElementById("photos").style.display = "flex";
                 document.getElementById("birthday-audio").play();
